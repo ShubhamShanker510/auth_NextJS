@@ -12,16 +12,22 @@
     1. Simply connecting database how we connected in express also
 
 # Step-3
-# Creating User model
+## Creating User model
     1. creating schema with all the required field in models folder
 
 # Step-4
-# Configure mail
+## Configure mail
     1. In helper folder thier is mail.ts file where all the steps were written to send the email
     2. for this we are using nodemailer 👉 https://www.nodemailer.com/ and mailtrap 👉 https://mailtrap.io/ for sending mails
 
 # Step-5
-# Creating signup api
+## Creating signup api
     1. It is necessary to connectdb in every single routes as next js run on edgecases
     2. You can even use zod for pre validation
     3. Routes working 👉 /api/user/signup 
+
+# Step-6
+## Creating login,logout and verifyEmail
+    1. Comparing token from email to the database and after verifying setup of verifytoken undefined
+    2. In login accepting response from the bodu and finding user by email and creating token with the help of jwt sending it into cookie
+    3. Clearing token in logout
