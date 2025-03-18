@@ -31,3 +31,7 @@
     1. Comparing token from email to the database and after verifying setup of verifytoken undefined
     2. In login accepting response from the bodu and finding user by email and creating token with the help of jwt sending it into cookie
     3. Clearing token in logout
+
+# Step -7
+## Create frontend
+    1. login ,signup and verify email done

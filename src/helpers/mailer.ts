@@ -17,17 +17,23 @@ export const sendEmail=async({email, emailType, userId}:any)=>{
             <br> ${process.env.DOMAIN}/resetpassword?token=${hashedToken}
             </p>`
             
+            console.log("Email Type: ", emailType);
+            console.log("Type of email", typeof emailType)
 
             // saving token and token expiry in database
         if(emailType==="VERIFY"){
             await User.findByIdAndUpdate(userId,{
+               $set:{
                 verifyToken: hashedToken,
                 verifyTokenExpiry: Date.now()+3600000
+               }
             })
         }else if(emailType==="RESET"){
             await User.findByIdAndUpdate(userId,{
+                $set:{
                 forgotPasswordToken: hashedToken,
                 forgotPasswordTokenExpiry: Date.now()+3600000
+                }
             })
         }
 
