@@ -35,3 +35,8 @@
 # Step -7
 ## Create frontend
     1. login ,signup and verify email done
+
+# Step -8
+## Creating middleware and profile page
+   1. File name must be in this format 👉 middleware.ts
+   2. Create a profile page and also a dynamic file
